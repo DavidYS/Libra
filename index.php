@@ -21,29 +21,38 @@ if( isset($_SESSION['user_id']) ){
 		<link href='http://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
-		<header>
+	<div class='cointainer-fluid'>
+			<header>
 			<ul>
 				<li><a href="/">Libra</a></li>
-				<li><a href="/"></a></li>
-				<li><a href="/"></a></li>
-				<li><a href="/"></a></li>
-				<li><a href="/"></a></li>
+				<li><a href="/">Home</a></li>
+				<li><a href="/">Books</a></li>
+				<?php
+					if( isset($_SESSION['user_id'])) { ?>
+				<li><a href='/'>Become an Admin</a></li>
+				<li><a href='logout.php'>Log Out</a></li>
+				<?php } else { ?>
+				<li><a href="/"></a>Login</li>
+				<li><a href="/"></a>Register</li>
+				<?php } ?>
 			</ul>
 		</header>
 		<div class="bg">
 			<div class="logo"></div>
 		</div>
-		<?php if( !empty($user) ): ?>
+		<?php if( isset($_SESSION['user_id']) ) { ?>
 		<br />Welcome <?= $user['email']; ?>
 		<br /><br />You are successfully logged in!
 		<br /><br />
 		<a href="logout.php">Logout?</a>
-		<?php else: ?>
+		<?php } else { ?>
+
 		<h1>Please Login or Register</h1>
 		<a href="login.php">Login</a> or
 		<a href="register.php">Register</a>
-		<?php endif; ?>
+		<?php } ?>
 		<div style='height:2000px'>
+		</div>
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>

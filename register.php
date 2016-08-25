@@ -27,21 +27,31 @@ endif;
 		<link href='http://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
+	<div class='cointainer-fluid'>
 		<header>
 			<ul>
 				<li><a href="/">Libra</a></li>
-				<li><a href="/"></a></li>
-				<li><a href="/"></a></li>
-				<li><a href="/"></a></li>
-				<li><a href="/"></a></li>
+				<li><a href="/">Home</a></li>
+				<li><a href="/">Books</a></li>
+				<?php
+					if( isset($_SESSION['user_id'])) { ?>
+				<li><a href='/'>Become an Admin</a></li>
+				<li><a href='logout.php'>Log Out</a></li>
+				<?php } else { ?>
+				<li><a href="/"></a>Login</li>
+				<li><a href="/"></a>Register</li>
+				<?php } ?>
 			</ul>
 		</header>
 		<div class="bg">
 			<div class="logo"></div>
 		</div>
+		<section id='log'>
 		<?php if(!empty($message)): ?>
 		<p><?= $message ?></p>
 		<?php endif; ?>
+		</section>
+		<?php if(!isset($_SESSION['user_id'])) { ?>
 		<h1>Register</h1>
 		<span>or <a href="login.php">login here</a></span>
 		<form action="register.php" method="POST">
@@ -50,7 +60,13 @@ endif;
 			<input type="password" placeholder="confirm password" name="confirm_password">
 			<input type="submit">
 		</form>
+		<?php } else { ?>
+			<div class = 'welcome'>
+				<h1>Welcome to Libra</h1>
+
+		<?php } ?>
 		<div style='height:2000px'>
+		</div>
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
