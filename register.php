@@ -32,15 +32,15 @@ endif;
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Register Below</title>
+	<title>Libra | Register</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<link href='http://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
-	<div class="header">
-		<a href="/">Your App Name</a>
-	</div>
+	<header>
+		<a href="/">Libra</a>
+	<header>
 	    <div class="bg">
 	  <div class="logo"></div>
 	</div>

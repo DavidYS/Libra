@@ -9,7 +9,7 @@ if( isset($_SESSION['user_id']) ){
 require 'database.php';
 
 if(!empty($_POST['email']) && !empty($_POST['password'])):
-	
+
 	$records = $conn->prepare('SELECT id,email,password FROM users WHERE email = :email');
 	$records->bindParam(':email', $_POST['email']);
 	$records->execute();
@@ -33,27 +33,27 @@ endif;
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Login Below</title>
+	<title>Libra | Login</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<link href='http://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
-	<div class="header">
-		<a href="/">Your App Name</a>
-	</div>
+	<header>
+		<a href="/">Libra</a>
+	<header>
 	     <div class="bg">
 	  <div class="logo"></div>
 	</div>
 	<?php if(!empty($message)): ?>
 		<p><?= $message ?></p>
 	<?php endif; ?>
-	
+
 	<h1>Login</h1>
 	<span>or <a href="register.php">register here</a></span>
 
 	<form action="login.php" method="POST">
-		
+
 		<input type="text" placeholder="Enter your email" name="email">
 		<input type="password" placeholder="and password" name="password">
 
