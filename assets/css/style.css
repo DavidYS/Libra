@@ -31,7 +31,9 @@ header {
     border-bottom: 1px solid #eee;
     padding: 10px 0px;
     width: 100%;
-    text-align: center;
+}
+header li {
+	list-style-type: none;
 }
 header a {
     color: #333;
