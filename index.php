@@ -14,6 +14,27 @@ if( isset($_SESSION['user_id']) ){
 ?>
 <!DOCTYPE html>
 <html>
+<head>
+	<title>Libra | Buy online</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link href='http://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+	<header>
+		<ul>
+		<li><a href="/">Libra</a></li>
+		<li><a href="/"></a></li>
+		<li><a href="/"></a></li>
+		<li><a href="/"></a></li>
+		<li><a href="/"></a></li>
+		</ul>
+	<header>s
+    <div class="bg">
+	  <div class="logo"></div>
+	</div>
+	<?php if( !empty($user) ): ?>
+
 	<head>
 		<title>Libra | Buy online</title>
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -51,11 +72,12 @@ if( isset($_SESSION['user_id']) ){
 		<a href="login.php">Login</a> or
 		<a href="register.php">Register</a>
 		<?php } ?>
-		<div style='height:2000px'>
-		</div>
+				</div>
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<script src='js/functions.js'></script>
+		<script src='js/verify.js'></script>
 	</body>
 </html>
+

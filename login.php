@@ -42,6 +42,28 @@ endif;
 		</div>
 		<?php if(!empty($message)): ?>
 		<p><?= $message ?></p>
+
+	<?php endif; ?>
+
+	<h1>Login</h1>
+	<span>or <a href="register.php">register here</a></span>
+
+	<form action="login.php" method="POST">
+
+		<input type="text" placeholder="Enter your email" name="email">
+		<input type="password" placeholder="Enter your password" name="password">
+
+		<input type="submit">
+
+	</form>
+	<div style='height:2000px'>
+	</div>
+	<script src='js/jquery-2.1.3.min.js'></script>
+	<script src='js/functions.js'></script>
+	<script src='js/verify.js'></script>
+</body>
+</html>
+
 		<?php endif; ?>
 		<h1>Login</h1>
 		<span>or <a href="register.php">register here</a></span>
@@ -58,3 +80,4 @@ endif;
 		<script src='js/functions.js'></script>
 	</body>
 </html>
+
