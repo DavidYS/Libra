@@ -38,7 +38,7 @@ if( isset($_SESSION['user_id']) ){
 		<li><a href="/"></a></li>
 		<li><a href="/"></a></li>
 		</ul>
-	<header>
+	<header>s
     <div class="bg">
 	  <div class="logo"></div>
 	</div>
@@ -60,5 +60,6 @@ if( isset($_SESSION['user_id']) ){
 	</div>
 	<script src='js/jquery-2.1.3.min.js'></script>
 	<script src='js/functions.js'></script>
+	<script src='js/verify.js'></script>
 </body>
 </html>

@@ -59,15 +59,16 @@ endif;
 
 	<form action="register.php" method="POST">
 
-		<input type="text" placeholder="Enter your email" name="email">
-		<input type="password" placeholder="and password" name="password">
-		<input type="password" placeholder="confirm password" name="confirm_password">
+		<input type="text" placeholder="Enter your email" name="email"><span id='email'></span>
+		<input type="password" placeholder="Enter your password" name="password"><span id = 'pass'></span>
+		<input type="password" placeholder="Repeat your password" name="cpassword"><span id='cpass'></span>
 		<input type="submit">
-
+	
 	</form>
 	<div style='height:2000px'>
 	</div>
 	<script src='js/jquery-2.1.3.min.js'></script>
 	<script src='js/functions.js'></script>
+	<script src='js/verify.js'></script>
 </body>
 </html>
