@@ -31,7 +31,13 @@ if( isset($_SESSION['user_id']) ){
 <body>
 
 	<header>
-		<a href="/">Libra</a>
+		<ul>
+		<li><a href="/">Libra</a></li>
+		<li><a href="/"></a></li>
+		<li><a href="/"></a></li>
+		<li><a href="/"></a></li>
+		<li><a href="/"></a></li>
+		</ul>
 	<header>
     <div class="bg">
 	  <div class="logo"></div>
