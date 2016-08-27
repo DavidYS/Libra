@@ -27,20 +27,14 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background: #00b8eb;
 }
-header {
-    border-bottom: 1px solid #eee;
-    padding: 10px 0px;
-    width: 100%;
-}
-header li {
-	list-style-type: none;
-}
-header a {
-    color: #333;
-    text-decoration: none;
-}
-img {
-    max-width: 100%;
+
+
+
+ .navbar img {
+    max-width: 70%;
+    margin-left:10px;
+    margin-right: -30px;
+    align: center;
 }
 .bg {
     position: relative;
