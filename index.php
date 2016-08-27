@@ -14,6 +14,7 @@ if( isset($_SESSION['user_id']) ){
 ?>
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<title>Libra | Buy online</title>
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -41,6 +42,7 @@ if( isset($_SESSION['user_id']) ){
 			<div class="logo"></div>
 		</div>
 		<?php if( isset($_SESSION['user_id']) ) { ?>
+
 		<br />Welcome <?= $user['email']; ?>
 		<br /><br />You are successfully logged in!
 		<br /><br />
@@ -51,11 +53,18 @@ if( isset($_SESSION['user_id']) ){
 		<a href="login.php">Login</a> or
 		<a href="register.php">Register</a>
 		<?php } ?>
+
+
+
+
 		<div style='height:2000px'>
 		</div>
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<script src='js/functions.js'></script>
+		<script src='js/verify.js'></script>
+
 	</body>
 </html>
+

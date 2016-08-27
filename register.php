@@ -41,6 +41,7 @@ endif;
 				<li><a href="/"></a>Login</li>
 				<li><a href="/"></a>Register</li>
 				<?php } ?>
+
 			</ul>
 		</header>
 		<div class="bg">
@@ -49,27 +50,29 @@ endif;
 		<section id='log'>
 		<?php if(!empty($message)): ?>
 		<p><?= $message ?></p>
+
 		<?php endif; ?>
 		</section>
 		<?php if(!isset($_SESSION['user_id'])) { ?>
 		<h1>Register</h1>
 		<span>or <a href="login.php">login here</a></span>
 		<form action="register.php" method="POST">
-			<input type="text" placeholder="Enter your email" name="email">
-			<input type="password" placeholder="and password" name="password">
-			<input type="password" placeholder="confirm password" name="confirm_password">
-			<input type="submit">
-		</form>
-		<?php } else { ?>
-			<div class = 'welcome'>
-				<h1>Welcome to Libra</h1>
 
+		<input type="text" placeholder="Enter your email" name="email"><span id='email'></span>
+		<input type="password" placeholder="Enter your password" name="password"><span id = 'pass'></span>
+		<input type="password" placeholder="Repeat your password" name="cpassword"><span id='cpass'></span>
+		<input type="submit">
+	
+	</form>
 		<?php } ?>
 		<div style='height:2000px'>
+
 		</div>
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<script src='js/functions.js'></script>
+		<script src='js/verify.js'></script>
 	</body>
 </html>
+
