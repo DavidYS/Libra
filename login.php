@@ -22,8 +22,9 @@ endif;
 <html>
 	<head>
 		<title>Libra | Login</title>
+				<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
 		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<link href='http://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
@@ -56,26 +57,13 @@ endif;
 
 	</form>
 	<div style='height:2000px'>
-	</div>
-	<script src='js/jquery-2.1.3.min.js'></script>
-	<script src='js/functions.js'></script>
-	<script src='js/verify.js'></script>
-</body>
-</html>
 
-		<?php endif; ?>
-		<h1>Login</h1>
-		<span>or <a href="register.php">register here</a></span>
-		<form action="login.php" method="POST">
-			<input type="text" placeholder="Enter your email" name="email">
-			<input type="password" placeholder="and password" name="password">
-			<input type="submit">
-		</form>
-		<div style='height:2000px'>
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<script src='js/functions.js'></script>
+		<script src='js/verify.js'></script>
+
 	</body>
 </html>
 
