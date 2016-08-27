@@ -29,11 +29,15 @@ $(function(){
 	{
 		spanPass.text('✓');
 		spanPass.css('color', 'green');
+		spanCpass.text('✓');
+		spanCpass.css('color', 'green');
 	}
 	else
 	{
 		spanPass.text('X');
 		spanPass.css('color','red');
+		spanCpass.text('X');
+		spanCpass.css('color','red');
 	}
 
 })

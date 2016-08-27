@@ -4,7 +4,21 @@ body {
     font-family: 'Comfortaa', cursive;
     text-align: center;
 }
-
+.container-fluid {
+    z-index:2;
+}
+/* Informal Sections */
+.log {
+    margin:auto;
+    padding: 20px;
+}
+.promo {
+    font-size:16px;
+    margin: 0 auto;
+    margin-top: 15px;
+    padding: 10px;
+    
+}
 /* Form Style (Dev Dojo Inspiration) */
 input[type="text"], input[type="password"] {
     outline: none;
@@ -15,6 +29,9 @@ input[type="text"], input[type="password"] {
     border: 1px solid #eee;
     margin: 20px auto;
    
+}
+input[type="text"]:focus, input[type="password"]:focus {
+    border: 1px solid lightblue;
 }
 input[type="submit"] {
     padding: 10px;
@@ -55,7 +72,6 @@ background: white; }
     background-position: top center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    border-radius: 30px;
     overflow: hidden;
 }
 .logo {
@@ -69,3 +85,22 @@ background: white; }
     top: 50%;
     margin-top: -50px;
 }
+
+footer {
+    font-weight:bold;
+  background: #eee;
+  color: black;
+  padding: 40px 0;
+  bottom: 0;
+  width: 100%;
+  }
+  footer .footer-stuff {
+    max-width: 640px;
+    margin: 0 auto; }
+
+  footer input {
+    color: #666; }
+    footer li {
+        list-style-type: none;
+    }
+    

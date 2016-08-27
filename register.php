@@ -1,7 +1,7 @@
 <?php
 session_start();
 if( isset($_SESSION['user_id']) ){
-	header("Location: /");
+	header("Location: index.php");
 }
 require 'database.php';
 $message = '';
@@ -49,11 +49,11 @@ endif;
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Find Books <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Adventure</a></li>
-            <li><a href="#">Comedy</a></li>
+            <li><a href="library.php">Action</a></li>
+            <li><a href="library.php">Adventure</a></li>
+            <li><a href="library.php">Comedy</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="#">Biography</a></li>
+            <li><a href="library.php">Biography</a></li>
           </ul>
         </li>
       </ul> 
@@ -64,6 +64,9 @@ endif;
         <li class='active'><a href="register.php">Register</a></li>
       </ul>
       <?php } else { ?>
+      	<ul class='nav navbar-nav navbar-left'>
+									<li><a href='#'>Become an Admin</a></li>
+								</ul>
       <ul class='nav navbar-nav navbar-right'>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Your Account <span class="caret"></span></a>
@@ -82,7 +85,8 @@ endif;
 		<div class="bg">
 			<div class="logo"></div>
 		</div>
-		<section id='log'>
+
+		<section class='log'>
 		<?php if(!empty($message)): ?>
 		<p><?= $message ?></p>
 
@@ -91,7 +95,7 @@ endif;
 		<?php if(!isset($_SESSION['user_id'])) { ?>
 		<h1>Register</h1>
 		<span>or <a href="login.php">login here</a></span>
-		<form action="register.php" method="POST">
+		<form action="register.php" method="POST" class='form-group'>
 
 		<input type="text" placeholder="Enter your email" name="email"><span id='email'></span><br>
 		<input type="password" placeholder="Enter your password" name="password"><span id = 'pass'></span><br>
