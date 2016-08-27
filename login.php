@@ -93,8 +93,8 @@ endif;
 
 	<form action="login.php" method="POST">
 
-		<input type="text" placeholder="Enter your email" name="email">
-		<input type="password" placeholder="Enter your password" name="password">
+		<input type="text" placeholder="Enter your email" name="email"><br>
+		<input type="password" placeholder="Enter your password" name="password"><br>
 
 		<input type="submit">
 

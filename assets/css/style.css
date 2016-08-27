@@ -4,14 +4,17 @@ body {
     font-family: 'Comfortaa', cursive;
     text-align: center;
 }
+
+/* Form Style (Dev Dojo Inspiration) */
 input[type="text"], input[type="password"] {
     outline: none;
     padding: 10px;
-    display: block;
+    display: inline-block;
     width: 300px;
     border-radius: 3px;
     border: 1px solid #eee;
     margin: 20px auto;
+   
 }
 input[type="submit"] {
     padding: 10px;
@@ -27,7 +30,10 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background: #00b8eb;
 }
-
+form span {
+    font:bold;
+}
+/* Navbar Style (BootStrap 3 Template) */
 .navbar { 
 border: 1px solid white;
 background: white; }
@@ -39,6 +45,8 @@ background: white; }
     margin-right: -30px;
     align: center;
 }
+
+/* Parallax (Dev Tips Support)*/
 .bg {
     position: relative;
     height: 600px;

@@ -45,7 +45,7 @@ endif;
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li ><a href="#">Home <span class="sr-only">(current)</span></a></li>
+        <li ><a href="index.php">Home <span class="sr-only">(current)</span></a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Find Books <span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -93,9 +93,9 @@ endif;
 		<span>or <a href="login.php">login here</a></span>
 		<form action="register.php" method="POST">
 
-		<input type="text" placeholder="Enter your email" name="email"><span id='email'></span>
-		<input type="password" placeholder="Enter your password" name="password"><span id = 'pass'></span>
-		<input type="password" placeholder="Repeat your password" name="cpassword"><span id='cpass'></span>
+		<input type="text" placeholder="Enter your email" name="email"><span id='email'></span><br>
+		<input type="password" placeholder="Enter your password" name="password"><span id = 'pass'></span><br>
+		<input type="password" placeholder="Repeat your password" name="cpassword"><span id='cpass'></span><br>
 		<input type="submit">
 	
 	</form>
