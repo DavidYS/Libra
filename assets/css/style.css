@@ -28,8 +28,11 @@ input[type="submit"]:hover {
     background: #00b8eb;
 }
 
+.navbar { 
+border: 1px solid white;
+background: white; }
 
-
+    
  .navbar img {
     max-width: 70%;
     margin-left:10px;
