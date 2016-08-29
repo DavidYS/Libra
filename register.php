@@ -38,7 +38,7 @@ endif;
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-       <a class="navbar-brand" href="#">
+       <a class="navbar-brand" href="index.php">
         <img alt="Brand" src="assets/images/brand.jpg">
     </div>
 
@@ -69,7 +69,7 @@ endif;
 								</ul>
       <ul class='nav navbar-nav navbar-right'>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Your Account <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?= $user['email']; ?> <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="#">Profile</a></li>
             <li><a href="#">History</a></li>
@@ -104,7 +104,38 @@ endif;
 	
 	</form>
 		<?php } ?>
-		<div style='height:2000px'>
+		 <footer>
+      <div class="row footer-stuff">
+        <div class="col-xs-3"><strong>FIND US ON</strong>
+          <ul>
+            <li><a href="">Twitter</a></li>
+            <li><a href="">Facebook</a></li>
+            <li><a href="">Pinterest</a></li>
+            <li><a href="">Instagram</a></li>
+          </ul>
+        </div>
+        <div class="col-xs-3"><strong>OTHER SITES</strong>
+          <ul>
+            <li><a href="">Wikipedia</a></li>
+            <li><a href="">Scribd</a></li>
+          	
+          </ul>
+        </div>
+        <div class="columns six">
+          <p>
+
+		<?php if(!isset($_SESSION['user_id'])){ ?>
+          <strong><a href='register.php'> Sign Up </a> for the newsletter</strong> 
+         <?php } else { ?>
+         	Welcome <?php $_SESSION['user_id'] ?>.
+         <?php } ?>
+
+
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
+      </div>
+    </footer>
+
 
 		</div>
 		</div>

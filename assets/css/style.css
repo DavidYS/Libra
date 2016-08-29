@@ -17,8 +17,8 @@ body {
     margin: 0 auto;
     margin-top: 15px;
     padding: 10px;
-    
 }
+
 /* Form Style (Dev Dojo Inspiration) */
 input[type="text"], input[type="password"] {
     outline: none;

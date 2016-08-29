@@ -33,7 +33,7 @@ if( isset($_SESSION['user_id']) ){
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="#">
+					<a class="navbar-brand" href="index.php">
 						<img alt="Brand" src="assets/images/brand.jpg">
 					</div>
 
@@ -64,7 +64,7 @@ if( isset($_SESSION['user_id']) ){
 								</ul>
 								<ul class='nav navbar-nav navbar-right'>
 									<li class="dropdown">
-										<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Your Account <span class="caret"></span></a>
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?= $user['email']; ?> <span class="caret"></span></a>
 										<ul class="dropdown-menu">
 											<li><a href="#">Profile</a></li>
 											<li><a href="#">History</a></li>
@@ -144,7 +144,7 @@ if( isset($_SESSION['user_id']) ){
           <p>
 
 		<?php if(!isset($_SESSION['user_id'])){ ?>
-          <strong>Sign Up for the newsletter</strong> 
+          <strong><a href='register.php'> Sign Up </a> for the newsletter</strong> 
          <?php } else { ?>
          	Welcome <?php $_SESSION['user_id'] ?>.
          <?php } ?>
