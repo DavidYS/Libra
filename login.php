@@ -51,9 +51,9 @@ endif;
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Find Books <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="library.php">Action</a></li>
-                  <li><a href="library.php">Adventure</a></li>
-                  <li><a href="library.php">Comedy</a></li>
+                  <li><a href="library.php">Poetry</a></li>
+                  <li><a href="library.php">Short Story</a></li>
+                  <li><a href="library.php">Novel</a></li>
                   <li role="separator" class="divider"></li>
                   <li><a href="library.php">Biography</a></li>
                 </ul>

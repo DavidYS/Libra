@@ -3,18 +3,29 @@
 session_start();
 require 'database.php';
 if( isset($_SESSION['user_id']) ){
+	$records = $conn->prepare('SELECT id,email,password FROM users WHERE id = :id');
+	$records->bindParam(':id', $_SESSION['user_id']);
+	$records->execute();
+	$results = $records->fetch(PDO::FETCH_ASSOC);
+	$user = NULL;
+	if( count($results) > 0){
+		$user = $results;
+	}
 
-
+	
 	class TableRows  {
-		public $Id, $Author, $Title, $Genre, $Display;
+		public $Id, $Author, $Title, $Type, $Display;
 		public function __construct(){
-			$this->Display = '<tr><td>'.$this->Author.'</td><td>'.$this->Title.'</td><td>'.$this->Genre.'</td></tr>';
+			$this->Display = '<tr><td>'.$this->Author.'</td><td>'.$this->Title.'</td><td>'.$this->Type.'</td></tr>';
 
 
 		}
 	}
-	$stmt = $conn->query("SELECT Author, Title, Genre FROM Books");
+	if(!empty($_POST['bookFinder'])):
+		$book= $_POST['bookFinder'];
+	$stmt = $conn->query("SELECT * FROM Books WHERE (Author LIKE '%$book%')");
 	$stmt->setFetchMode(PDO::FETCH_CLASS, 'TableRows');	
+	endif;
 }
 ?>
 <!DOCTYPE html>
@@ -49,9 +60,9 @@ if( isset($_SESSION['user_id']) ){
 							<li class="dropdown active" >
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Find Books <span class="caret"></span></a>
 								<ul class="dropdown-menu">
-									<li><a href="library.php">Action</a></li>
-									<li><a href="library.php">Adventure</a></li>
-									<li><a href="library.php">Comedy</a></li>
+									<li><a href="library.php">Poetry</a></li>
+									<li><a href="library.php">Short Story</a></li>
+									<li><a href="library.php">Novel</a></li>
 									<li role="separator" class="divider"></li>
 									<li><a href="library.php">Biography</a></li>
 								</ul>
@@ -82,7 +93,10 @@ if( isset($_SESSION['user_id']) ){
 							</div><!-- /.navbar-collapse -->
 						</div><!-- /.container-fluid -->
 					</nav>
+
 					<hr>
+
+
 					<h3> <?php if(!isset($_SESSION['user_id'])) { ?> 
 						<a href='login.php'>Sign In.</a> Read or Buy the newest books.</h3>
 						<p class='promo'>
@@ -94,24 +108,26 @@ if( isset($_SESSION['user_id']) ){
 
 									<h3>Welcome <?= $user['email']; ?></h3>
 									<form method='POST' action='library.php'>
-										<input type='text' name='bookFinder' placeholder='Books, Authors, Genre'>
+										<input type='text' name='bookFinder' placeholder='Books, Authors, Type'>
 										<input type='submit' class='btn btn-success'>
 
 										<p class='promo'>
 											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer varius magna ac lectus viverra pulvinar. Nulla lobortis nibh elementum, pulvinar nisl vitae, pretium erat. Curabitur luctus nulla enim, cursus pellentesque leo vehicula eget. Ut id sodales nunc, in placerat turpis. Ut gravida est in erat viverra, ut pharetra elit viverra. Proin suscipit rutrum felis id efficitur. Sed laoreet ligula nec mauris placerat, nec consectetur mi lobortis. Etiam elementum ultricies aliquet. Proin at varius nunc. Suspendisse non erat lacus. Aliquam ut auctor magna, id venenatis metus. Sed molestie ultrices tincidunt. Aenean fermentum ligula ac luctus consequat. Suspendisse porttitor ipsum at auctor posuere. Mauris at sem id magna sodales fermentum.</p>
 
-											<h3>Read from your Device</h3>
+											
+											<?php 	
+											if(!empty($_POST['bookFinder'])):	?>
+
+												<h3>Read from your Device</h3>
 											<div class='table-responsive container'>
 												<table class='table table-striped table-hovered'>
-											<tr><th>BookID</th><th>Author</th><th>Title</th></tr>
-												
-												<?php 	
-												
-											while($result = $stmt->fetch()){
-													print($result->Display);
-												}
-								
-												?>
+													<tr><th>Author</th><th>Title</th><th>Type</th></tr>
+
+													<?php	while($result = $stmt->fetch()){
+														print($result->Display);
+													}
+													endif;
+													?>
 												</table>
 											</div>
 											<?php } ?>
