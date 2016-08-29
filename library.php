@@ -23,7 +23,7 @@ if( isset($_SESSION['user_id']) ){
 	}
 	if(!empty($_POST['bookFinder'])):
 		$book= $_POST['bookFinder'];
-	$stmt = $conn->query("SELECT * FROM Books WHERE (Author LIKE '%$book%')");
+	$stmt = $conn->query("SELECT * FROM Books WHERE (Author LIKE '%$book%') OR (Title LIKE '%$book%') OR (Type LIKE '%$book%')");
 	$stmt->setFetchMode(PDO::FETCH_CLASS, 'TableRows');	
 	endif;
 }
@@ -101,6 +101,7 @@ if( isset($_SESSION['user_id']) ){
 						<a href='login.php'>Sign In.</a> Read or Buy the newest books.</h3>
 						<p class='promo'>
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer varius magna ac lectus viverra pulvinar. Nulla lobortis nibh elementum, pulvinar nisl vitae, pretium erat. Curabitur luctus nulla enim, cursus pellentesque leo vehicula eget. Ut id sodales nunc, in placerat turpis. Ut gravida est in erat viverra, ut pharetra elit viverra. Proin suscipit rutrum felis id efficitur. Sed laoreet ligula nec mauris placerat, nec consectetur mi lobortis. Etiam elementum ultricies aliquet. Proin at varius nunc. Suspendisse non erat lacus. Aliquam ut auctor magna, id venenatis metus. Sed molestie ultrices tincidunt. Aenean fermentum ligula ac luctus consequat. Suspendisse porttitor ipsum at auctor posuere. Mauris at sem id magna sodales fermentum.</p>
+							<div style='height:500px'></div>
 							<?php } else { ?>
 								<?php if(!empty($message)){ ?>
 									<p><?= $message ?></p>

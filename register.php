@@ -100,7 +100,7 @@ endif;
 		<input type="text" placeholder="Enter your email" name="email"><span id='email'></span><br>
 		<input type="password" placeholder="Enter your password" name="password"><span id = 'pass'></span><br>
 		<input type="password" placeholder="Repeat your password" name="cpassword"><span id='cpass'></span><br>
-		<input type="submit">
+		<input type="submit" class='btn disabled'>
 	
 	</form>
 		<?php } ?>

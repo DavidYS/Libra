@@ -2,6 +2,7 @@ $(function(){
 	var $email = $('input[name="email"');
 	var $pass = $('input[name="password"]');
 	var $cpass = $('input[name="cpassword"]');
+	var $submit = $('input[type="submit"]');
 	var spanEmail = $('#email');
 	var spanPass = $('#pass');
 	var spanCpass = $('#cpass');
@@ -31,6 +32,7 @@ $(function(){
 		spanPass.css('color', 'green');
 		spanCpass.text('✓');
 		spanCpass.css('color', 'green');
+		$submit.removeClass('disabled');
 	}
 	else
 	{
